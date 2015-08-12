@@ -1,0 +1,23 @@
+ <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <a href="#" onclick="openPDF()" >
+   <img alt="aaa" src="images/button.png">
+ </a>
+    </body>
+</html>
+<script>
+function openPDF() {
+     var ref = window.open('http://www.i-drain.net/userfiles/file/einbauanleitung_iboard.pdf', '_blank', 'location=yes');
+     ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+     ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+     ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+     ref.addEventListener('exit', function(event) { alert(event.type); });
+}
+
+
+</script>

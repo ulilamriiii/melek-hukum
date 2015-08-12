@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>responsive-grid demo</title>
+  
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css">
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.2.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-1.11.0.min.map"></script>
+  <script src="js/jquery-2.1.0.js"></script>
+  
+  <!--<link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css">
+  <script src="js/jquery-2.1.0.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.mobile-1.4.2.min.js"></script>
+   <link rel="stylesheet" href="js/twitter-timeline.css" /> -->
+  <script type="text/javascript">
+  /*$(document).ready(function(){
+	$('#search').on('change', function (event) {
+	   //$.mobile.changePage("##hasilcari", null, true, true);
+	 	 $(':mobile-pagecontainer').pagecontainer('change', '#hasilcari', {
+        transition: 'flip',
+        changeHash: false,
+        reverse: true,
+        showLoadMsg: true 
+    }); 
+	});
+  });*/
+</script>
+    
+   <style>
+    @media all and (max-width: 35em) {
+    .my-breakpoint .ui-block-a,
+    .my-breakpoint .ui-block-b,
+    .my-breakpoint .ui-block-c,
+    .my-breakpoint .ui-block-d,
+    .my-breakpoint .ui-block-e {
+      width: 100%;
+      float:none;
+    }
+  }
+  @media all and (min-width: 45em) {
+    .my-breakpoint.ui-grid-b .ui-block-a { width: 49.95%; }
+    .my-breakpoint.ui-grid-b .ui-block-b,
+    .my-breakpoint.ui-grid-b .ui-block-c { width: 24.925%; }
+  }
+  </style>
+  
+  <style type="text/css">
+    .inner { position: relative; }
+    .logo { display: inline-block; font-size: 20px; margin: .5em 15px; }
+    .ui-input-search {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      float: left;
+      width: 20%;
+      -webkit-transition: width 600ms ease;
+      -moz-transition: width 600ms ease;
+      -o-transition: width 600ms ease;
+      transition: width 600ms ease;
+    }
+    .ui-input-search.ui-focus { width: 50%; }
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="home">
+<div data-role="header" data-position="fixed">
+ <div class="inner">
+      <h1 class="logo">Lensa hukum</h1>
+      <form>
+        <label for="searchbar" class="ui-hidden-accessible">Search:</label> 
+		<input type="search" id="search" data-theme="a" data-mini="true" Placeholder="cari hukum"></input>
+		</form>
+    </div>
+  </div>
+  
+  <div data-role="content" class="ui-content">
+  
+	  Welcome to my application
+	  Welcome to my application
+	  Welcome to my applicationWelcome to my applicationWelcome
+	  Welcome to my application
+	  Welcome to my application
+    </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+      <li ><a href="#twitter" data-icon="info" id="tomboltwit" class="show-page-loading-msg" data-ajax="false">Update</a></li>
+      <li><a href="#defaultpanel" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div><!-- /footer -->
+
+<div data-role="panel" id="defaultpanel" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#lalin">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel -->
+
+</div>
+
+<div data-role="page" id="twitter">
+<div data-role="header" data-position="fixed">
+    <h1>Melek Hukum</h1>
+  </div>
+
+  <div data-role="content" id="timeline" class="ui-content"> <!-- content -->
+  <!--<a class="twitter-timeline" href="https://twitter.com/ulilamriiii" data-widget-id="444866896274284544">Tweets by @ulilamriiii</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            	
+            </div> -->
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home" data-transition="flip" data-direction="reserve" class="ui-btn-active">Home</a></li>
+      <li ><a href="#twitter" data-icon="info">Update</a></li>
+      <li><a href="#defaultpanel1" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div>  
+
+  <div data-role="panel" id="defaultpanel1" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li  data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel1 -->
+
+</div>
+
+<div data-role="page" id="bisnis">
+<div data-role="header" data-position="fixed">
+    <h1>Melek Hukum</h1>
+  </div>
+  
+  <div role="main" class="ui-content">
+  <div id="konten2">
+	 <div class="ui-grid-a">
+      <div class="ui-block-a" >
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">PAJAK </a>
+		<!--<img src="naruto.gif" width="60%" height="60%"/>-->
+      </div>
+      <div class="ui-block-b">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">Mulai Usaha</a>
+      </div>
+    </div>
+	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">PARTNbnhbjnjbnjnjknkjkjnkER</a>
+      </div>
+      <div class="ui-block-b">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">BUMgvbhnjmnjnmknjmijkjkiujkN</a>
+      </div>
+    </div>
+	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">UKM</a>
+      </div>
+      <div class="ui-block-b">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow" style="height:90px">LIHAT UU</a>
+      </div>
+    </div>
+	</div>
+    </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home">Home</a></li>
+      <li ><a href="#twitter" data-icon="info">Update</a></li>
+      <li><a href="#defaultpanel2" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div>  
+
+  <div data-role="panel" id="defaultpanel2" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li  data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel2 -->
+</div>
+
+
+
+<div data-role="page" id="lalin">
+<div data-role="header" data-position="fixed">
+    <h1>Melek Hukum</h1>
+  </div>
+  
+  <div role="main" class="ui-content" id="konten">
+
+    </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home">Home</a></li>
+      <li ><a href="#twitter" data-icon="info">Update</a></li>
+      <li><a href="#defaultpanel3" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div>  
+
+  <div data-role="panel" id="defaultpanel3" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li  data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel2 -->
+</div>
+
+<div data-role="page" id="animasi">
+<div data-role="header" data-position="fixed">
+    <h1>Melek Hukum</h1>
+  </div>
+  
+  <div role="main" class="ui-content" id="gambar">
+	
+    </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home">Home</a></li>
+      <li ><a href="#twitter" data-icon="info">Update</a></li>
+      <li><a href="#defaultpanel4" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div>  
+
+  <div data-role="panel" id="defaultpanel4" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li  data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel2 -->
+</div>
+
+<div data-role="page" id="hasilcari">
+<div data-role="header" data-position="fixed">
+    <h1>Melek Hukum</h1>
+  </div>
+  
+  <div role="main" class="ui-content" id="kontencari">
+	<div class="ui-grid-a">
+      <div class="ui-block-a" >
+        	<form>
+		<label for="searchbar" class="ui-hidden-accessible">Search:</label> 
+		<input type="search" id="search" data-theme="a" data-mini="true" Placeholder="cari hukum"></input>
+		</form>  
+      </div>
+    </div>
+        
+	
+    </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="top">
+    <ul>
+      <li><a href="#home" data-icon="home">Home</a></li>
+      <li ><a href="#twitter" data-icon="info">Update</a></li>
+      <li><a href="#defaultpanel5" data-icon="bars">Menu</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div>  
+
+  <div data-role="panel" id="defaultpanel5" data-theme="b" data-position="right">
+    <div class="panel-content">
+       <ul data-role="listview">
+		<li  data-icon="home"><a href="#bisnis">Bisnis</a></li>
+		<li data-icon="info"><a href="#">Kriminal</a></li>
+		<li data-icon="bars"><a href="#">Lalu Lintas</a></li>
+		<li data-icon="info"><a href="#">Lingkungan</a></li>
+    </ul>
+      <a href="#" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    </div><!-- /content wrapper for padding -->
+ </div><!-- /defaultpanel2 -->
+</div>
+
+</body>
+</html>
